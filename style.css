@@ -1,0 +1,29 @@
+/********************************
+* KM-Z80 web written by Katsumi *
+*    This script is released    *
+*      under the LGPL v2.1.     *
+********************************/
+
+body {
+	background: #202020;
+}
+.debug, .hidden {
+	display:none;
+}
+.file {
+	display:none;
+	background: #fff;
+	width: 480px;
+	text-decoration: none;
+	text-align: center;
+}
+.help {
+	color: #fff;
+	text-decoration: none;
+}
+div,pre {
+	background: #fff;
+	color: #000;
+	width: 480px;
+	font-size: small;
+}

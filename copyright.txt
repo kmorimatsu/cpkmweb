@@ -1,0 +1,53 @@
+﻿このソフトウェアの構築にあたり、次のライブラリーを用いています。
+
+6x8 dots Japanese font "k6x8"
+http://www.geocities.jp/littlimi/k6x8.htm
+
+JSZip
+http://stuk.github.io/jszip/
+
+いずれも、LGPLにコンパチブルなライセンスとして、このソフトウェアーに
+取り込ませて頂きました(JSZipは、MITライセンスとして)。
+
+Both libraries are included in this software with the LGPL-conpatible
+licenses (MIT license was used for JSZip).
+
+したがって、このソフトウェアーは、LGPL ver 2.1のライセンスの元、配布し
+ます。
+
+Therefore, this software is provided with the LGPL ver 2.1 license.
+
+
+
+Copyright (C) 2005-2015年、Katsumi
+ 
+このライブラリはフリーソフトウェアです。あなたはこれを、フリーソフトウェ
+ア財団によって発行されたGNU 劣等一般公衆利用許諾契約書(バージョン2.1 
+か、希望によってはそれ以降のバージョンのうちどれか)の定める条件の下で
+再頒布または改変することができます。
+
+このライブラリは有用であることを願って頒布されますが、*全くの無保証* 
+です。商業可能性の保証や特定の目的への適合性は、言外に示されたものも含
+め全く存在しません。詳しくはGNU 劣等一般公衆利用許諾契約書をご覧くださ
+い。
+
+あなたはこのライブラリと共に、GNU 劣等一般公衆利用許諾契約書の複製物を
+一部受け取ったはずです。もし受け取っていなければ、フリーソフトウェア財
+団まで請求してください(宛先は the Free Software Foundation, Inc., 59
+Temple Place, Suite 330, Boston, MA 02111-1307 USA)。
+ 
+Copyright (C) 2005-2015  Katsumi
+
+This library is free software; you can redistribute it and/or
+modify it under the terms of the GNU Lesser General Public
+License as published by the Free Software Foundation; either
+version 2 of the License, or (at your option) any later version.
+
+This library is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public
+License along with this library; if not, write to the Free Software
+Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--
+/*********************************
+*  CP/KM web written by Katsumi  *
+*    This script is released     *
+*      under the LGPL v2.1.      *
+*********************************/
+-->
+<head>
+	<meta charset="UTF-8" />
+	<title>CP/KM web v0.6</title>
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<!-- HTML5 functions -->
+	<script type="text/javascript" src="./get.js"></script>
+	<script type="text/javascript" src="./dom.js"></script>
+	<script type="text/javascript" src="./display.js"></script>
+	<!-- Load Z80 CPU emulator -->
+	<script type="text/javascript" src="./z80.js"></script>
+	<script type="text/javascript" src="./z80functions.js"></script>
+	<!-- Load PC environment -->
+	<script type="text/javascript" src="./memory.js"></script>
+	<script type="text/javascript" src="./io.js"></script>
+	<script type="text/javascript" src="./i8255.js"></script>
+	<!-- Load ROM -->
+	<script type="text/javascript" src="./rom.js"></script>
+	<!-- Load disk image -->
+	<script type="text/javascript" src="./disk.js"></script>
+	<!-- Load file handler -->
+	<script type="text/javascript" src="./file.js"></script>
+	<!-- Zip file support -->
+	<script type="text/javascript" src="./jszip.js"></script>
+	<!-- Load debug functions (optional; it will work at cpm.html?debug=1) -->
+	<script type="text/javascript" src="./debug.js"></script>
+</head>
+<body>
+	<!-- Main canvas used for display with 40x25 character resolution -->
+	<canvas id="display" width="480" height="384"></canvas>
+	<!-- Debug output -->
+	<div class="debug" id="debug"></div>
+	<!-- CPU speed indicator -->
+	<div class="info">
+		<span id="speed">clock: 2000000 hz</span>
+	</div>
+	<!-- Debug buttons -->
+	<div class="debug" style="width: 480px;">
+		<input value="Step" type="button" onclick="dom.clickStep();" />
+		<input value="Cont." type="button" onclick="dom.clickCont();" />
+		<input value="Stop at" type="button" onclick="dom.clickStopAt();" />
+		<input value="Log to" type="button" onclick="dom.clickLogTo();" />
+		<input value="Dump" type="button" onclick="dom.clickDump();" />
+	</div>
+	<!-- Debug outputs -->
+	<pre class="debug" id="displaylog"></pre>
+	<pre class="debug" id="dump"></pre>
+	<!-- File upload input -->
+	<input class="file" id="load" type="file" onchange="file.loaded(this);" />
+	<!-- File upload button -->
+	<input type="button" value="Set File" onclick="file.setFile(document.getElementById('load'));" />
+	<!-- Help file link -->
+	<a class="help" href="./help/index.html" onclick="window.open(this.href); return false;">Help</a>
+	<!-- File download link -->
+	<input type="button" value="Save Disks" class="hidden" id="savebutton" onclick="
+		disk.saveLink(document.getElementById('save'));
+	" />
+	<a class="file" id="save" href="#" download="cpmdisks.zip">Save Disk Image</a>
+	<!-- Load main script -->
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript">
+		// Iniliarizing display will start everything.
+		display.init();
+	</script>
+</body>
+</html>
