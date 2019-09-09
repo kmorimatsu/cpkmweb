@@ -24,9 +24,9 @@ romREAD:   JP 0x0000 ;0xf23c
 romWRITE:  JP 0x0000 ;0xf23f
 */
 z80.codeC3=function(){
-	if (this.regPC<0xF234 || 0xF240<this.regPC) return this.codeC3copy();
+	if (this.regPC<0xD234 || 0xD240<this.regPC) return this.codeC3copy();
 	switch(this.regPC){
-		case 0xf234:
+		case 0xd234:
 			//0C-0F CONST (console status; Returns its status in A; 0 if no character is ready, 0FFh if one is.)
 			if (i8255.const()) {
 				z80.loadA(0xff);
@@ -34,7 +34,7 @@ z80.codeC3=function(){
 				z80.loadA(0x00);
 			}
 			break;
-		case 0xf237:
+		case 0xd237:
 			//14-17 CONIN (console in; Wait until the keyboard is ready to provide a character, and return it in A.)
 			if (i8255.const()) {
 				// There is key-in.
@@ -44,16 +44,16 @@ z80.codeC3=function(){
 				return this.codeC3copy();
 			}
 			break;
-		case 0xf23a:
+		case 0xd23a:
 			//1C-1F CONOUT (console out; Write the character in C to the screen.)
 			display.writeChar(z80.regC);
 			break;
-		case 0xf23d:
+		case 0xd23d:
 			// READ
 			disk.read(z80.regHL);
 			z80.loadA(0x00);
 			break;
-		case 0xf240:
+		case 0xd240:
 			// WRITE
 			disk.write(z80.regHL);
 			z80.loadA(0x00);
