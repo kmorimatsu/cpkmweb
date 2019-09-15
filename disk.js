@@ -16,13 +16,13 @@ disk=new Object();
 disk.read=function(pos){
 	pos*=128;
 	for(var i=0;i<128;i++){
-		memory.ram[0xff80+i]=this.cpmdisks[pos+i];
+		memory.ram[0xdf80+i]=this.cpmdisks[pos+i];
 	}
 };
 disk.write=function(pos){
 	pos*=128;
 	for(var i=0;i<128;i++){
-		this.cpmdisks[pos+i]=memory.ram[0xff80+i];
+		this.cpmdisks[pos+i]=memory.ram[0xdf80+i];
 	}
 };
 disk.cpmdisks=Array(128*64*244*4);
